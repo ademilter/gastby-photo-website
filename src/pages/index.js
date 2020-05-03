@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 
-import './index.css'
+import "./index.css"
 
 const IndexPage = ({ data }) => {
   console.log(data)
@@ -23,7 +23,7 @@ const IndexPage = ({ data }) => {
 
 export const pageQuery = graphql`
   {
-  allFile(filter: {absolutePath: {regex: "//photos//"}}) {
+  allFile(filter: {absolutePath: {regex: "//photos//"}}, limit: 30) {
     edges {
       node {
         id
